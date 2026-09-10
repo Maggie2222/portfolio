@@ -117,15 +117,21 @@ a:focus-visible {
   padding: 0;
 }
 
-.work-item a {
+.work-item summary {
   display: grid;
   grid-template-columns: 2.9em 1fr;
   align-items: baseline;
   padding: 9px 0;
+  cursor: pointer;
+  list-style: none;
   transition: transform .15s ease;
 }
 
-.work-item a:hover { transform: translateX(3px); }
+/* hide the native disclosure triangle */
+.work-item summary::-webkit-details-marker { display: none; }
+.work-item summary::marker { content: ""; }
+
+.work-item summary:hover { transform: translateX(3px); }
 
 .num {
   font-size: 12.5px;
@@ -133,7 +139,7 @@ a:focus-visible {
   transition: color .15s ease;
 }
 
-.work-item a:hover .num { color: var(--fg); }
+.work-item summary:hover .num { color: var(--fg); }
 
 .title {
   font-size: 14px;
@@ -142,8 +148,25 @@ a:focus-visible {
   transition: border-color .15s ease;
 }
 
-.work-item a:hover .title {
+.work-item summary:hover .title {
   border-bottom-color: var(--fg);
+}
+
+/* expanded panel */
+.work-detail {
+  padding: 2px 0 14px 2.9em;
+}
+
+.work-name {
+  margin: 0;
+  font-size: 13px;
+  color: var(--fg);
+}
+
+.work-tags {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: var(--muted);
 }
 
 /* ─── How I work ───────────────────────────── */
