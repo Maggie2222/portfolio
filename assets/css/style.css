@@ -247,19 +247,6 @@ a:focus-visible {
   max-width: 46ch;
 }
 
-/* ─── Footer ───────────────────────────────── */
-
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 20px;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.footer a { transition: color .15s ease; }
-.footer a:hover { color: var(--fg); }
-
 /* ─── Responsive ───────────────────────────── */
 
 @media (max-width: 640px) {
