@@ -1,15 +1,45 @@
-# Portfolio
+# Maggie — Program & Experience Design
 
-Minimal monospace portfolio — Program · Experience · Design.
+I turn complex programs into experiences people can actually engage with.
+
+My work sits at the intersection of:
+
+- Program Design
+- Learning Experience
+- Project Management
+- Interaction Design
+- International Education
+
+## Selected Work
+
+### West Coast Innovation Practice
+Designing a pre-trip and field-study experience around innovation.
+
+### East Coast Leadership Journey
+Connecting academic courses, field visits and reflection through a leadership narrative.
+
+### Card-based Pre-trip Experience
+A lightweight web experiment turning preparation into interaction.
+
+### International Study Tour
+Managing complex international programs from concept to delivery.
+
+## Things I Build
+
+Small experiments, prototypes and tools for making programs more engaging.
+
+→ [Visit the portfolio](https://maggie2222.github.io/portfolio/)
+
+---
 
 ## Structure
 
 ```
 portfolio/
 ├── index.html              # single-page site
-├── assets/css/style.css
-├── projects/               # one page per Selected Work item
-│   ├── 01.html … 05.html
+├── assets/
+│   ├── css/style.css
+│   └── img/                # project screenshots
 └── README.md
 ```
 
@@ -24,10 +54,12 @@ python -m http.server 8000
 
 ## Deploy to GitHub Pages
 
-1. Create repo `maggie2222/portfolio` and push to `main`.
-2. Settings → Pages → Build and deployment
-3. Source: **Deploy from a branch** → Branch `main` / folder `/ (root)`
-4. Wait 1–2 min → `https://maggie2222.github.io/portfolio/`
+Repo: <https://github.com/Maggie2222/portfolio> — Pages is already enabled
+(build type `legacy`, source `main` / `/ (root)`).
+
+Site: <https://maggie2222.github.io/portfolio/>
+
+Any push to `main` rebuilds automatically in 1–2 min.
 
 ## Design tokens
 
@@ -61,5 +93,5 @@ Recommended size: 1280 × 800 (16:10).
 
 - [ ] Replace `mailto:hello@example.com` with real email
 - [ ] Point `[ Resume ]` at a real PDF
-- [ ] Update `projects/*.html` links once detail pages exist
+- [ ] Add `projects/01–05.html` detail pages for Selected Work
 - [ ] Give `[ experiments ]` a URL — currently inert, shows `[ soon ]`
