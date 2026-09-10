@@ -95,3 +95,7 @@ Recommended size: 1280 × 800 (16:10).
 - [ ] Point `[ Resume ]` at a real PDF
 - [ ] Add `projects/01–05.html` detail pages for Selected Work
 - [ ] Give `[ experiments ]` a URL — currently inert, shows `[ soon ]`
+
+---
+
+Open to opportunities in program design, learning experience, innovation and project management.
