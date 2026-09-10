@@ -1,0 +1,281 @@
+/* ─────────────────────────────────────────────
+   Portfolio — minimal monospace
+   ───────────────────────────────────────────── */
+
+:root {
+  --bg:      #ffffff;
+  --fg:      #111111;
+  --muted:   #8a8a8a;
+  --line:    #dcdcdc;
+  --accent:  #111111;
+
+  --mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace,
+          SFMono-Regular, Menlo, Consolas, monospace;
+
+  --measure: 640px;
+  --gutter:  24px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 72px var(--gutter) 96px;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 1px dashed var(--fg);
+  outline-offset: 3px;
+}
+
+/* ─── Rule ─────────────────────────────────── */
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  margin: 38px 0;
+}
+
+/* ─── Hero ─────────────────────────────────── */
+
+.hero {
+  border: 1px dashed var(--line);
+  padding: 34px 28px 30px;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(17px, 4vw, 21px);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.hero-meta {
+  margin: 16px 0 0;
+  font-size: 12.5px;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+.bracket-btn {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 13px;
+  color: var(--muted);
+  transition: color .15s ease, transform .15s ease;
+}
+
+.bracket-btn:hover {
+  color: var(--fg);
+  transform: translateX(2px);
+}
+
+/* ─── Section label ────────────────────────── */
+
+.label {
+  margin: 0 0 20px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ─── Selected work ────────────────────────── */
+
+.work-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-item a {
+  display: grid;
+  grid-template-columns: 2.9em 1fr;
+  align-items: baseline;
+  padding: 9px 0;
+  transition: transform .15s ease;
+}
+
+.work-item a:hover { transform: translateX(3px); }
+
+.num {
+  font-size: 12.5px;
+  color: var(--muted);
+  transition: color .15s ease;
+}
+
+.work-item a:hover .num { color: var(--fg); }
+
+.title {
+  font-size: 14px;
+  line-height: 1.6;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s ease;
+}
+
+.work-item a:hover .title {
+  border-bottom-color: var(--fg);
+}
+
+/* ─── How I work ───────────────────────────── */
+
+.flow {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 10px;
+  font-size: 14px;
+}
+
+.arrow {
+  color: var(--muted);
+  padding: 0 2px;
+}
+
+/* ─── Things I built ───────────────────────── */
+
+.built-group {
+  margin-bottom: 28px;
+}
+.built-group:last-child { margin-bottom: 0; }
+
+.built-title {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: var(--muted);
+}
+
+.built-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 20px;
+}
+
+.built-items.is-single {
+  grid-template-columns: 1fr;
+  max-width: 220px;
+}
+
+/* screenshot frame — dashed placeholder until an image is dropped in */
+.shot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 10;
+  border: 1px dashed var(--line);
+  overflow: hidden;
+  transition: border-color .15s ease;
+}
+
+.shot::after {
+  content: "[ screenshot ]";
+  position: relative;
+  z-index: 0;
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: var(--muted);
+}
+
+.shot img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.built-items a:hover .shot { border-color: var(--fg); }
+
+.item-name {
+  display: block;
+  margin-top: 8px;
+  font-size: 12.5px;
+  color: var(--muted);
+  transition: color .15s ease;
+}
+
+.built-items a:hover .item-name { color: var(--fg); }
+
+/* not linked yet */
+.shot.is-empty::after { content: "[ soon ]"; }
+.shot.is-empty:hover { border-color: var(--line); }
+
+/* ─── About ────────────────────────────────── */
+
+.about {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.75;
+  max-width: 46ch;
+}
+
+/* ─── Footer ───────────────────────────────── */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer a { transition: color .15s ease; }
+.footer a:hover { color: var(--fg); }
+
+/* ─── Responsive ───────────────────────────── */
+
+@media (max-width: 640px) {
+  body {
+    padding: 44px 20px 72px;
+  }
+  .hero {
+    padding: 26px 20px 24px;
+  }
+  .work-item a {
+    grid-template-columns: 2.4em 1fr;
+  }
+  .rule { margin: 30px 0; }
+}
+
+@media (max-width: 480px) {
+  .built-items { grid-template-columns: 1fr; }
+  .built-items.is-single { max-width: none; }
+}
