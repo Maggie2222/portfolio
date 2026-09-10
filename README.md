@@ -15,14 +15,30 @@ My work sits at the intersection of:
 ### West Coast Innovation Practice
 Designing a pre-trip and field-study experience around innovation.
 
+*Can a study tour become an active learning experience?*
+Program Design / Experience Design / International Education
+
 ### East Coast Leadership Journey
 Connecting academic courses, field visits and reflection through a leadership narrative.
+
+*How do you turn a three-day academic visit into a leadership journey?*
+Learning Experience / Curriculum Design / Program Strategy
 
 ### Card-based Pre-trip Experience
 A lightweight web experiment turning preparation into interaction.
 
-### International Study Tour
+*What if students don't just receive pre-trip materials — but interact with them?*
+Interaction Design / Digital Experiment / User Engagement
+
+### International Study Tour Program
 Managing complex international programs from concept to delivery.
+
+*How do you design a high-touch international program under real operational constraints?*
+Project Management / Vendor Management / Program Operations
+
+### AI × Business Education
+*Can AI become part of how business talent is developed?*
+Program Design / Partnership / Event Experience
 
 ## Things I Build
 
